@@ -1,7 +1,8 @@
 from .base import *
 import os
+from boto.s3.connection import S3Connection
 
-#SECRET_KEY = os.environ['SECRET_KEY']
+SECRET_KEY = S3Connection(os.environ['SECRET_KEY'])
 
 DEBUG = True
 
