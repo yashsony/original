@@ -1,6 +1,6 @@
 from .base import *
 
-SECRET_KEY = 's&%1odi0vl9yehk47je6=-dvi&5%n$fr3x=og%+07$3@4kpd-_'
+SECRET_KEY = os.environ['SECRET_KEY']
 
 DEBUG = True
 
