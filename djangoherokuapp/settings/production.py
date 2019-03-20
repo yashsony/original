@@ -23,12 +23,14 @@ MIDDLEWARE = [
 
 
 PROJECT_ROOT   =   os.path.join(os.path.abspath(__file__))
-STATIC_ROOT  =   os.path.join(BASE_DIR, 'staticfiles')
+MY = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+STATIC_ROOT  =   os.path.join(MY, 'staticfiles')
 STATIC_URL = '/static/'
 
 # Extra lookup directories for collectstatic to find static files
 STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'static'),
+    os.path.join(MY, 'static'),
+
 )
 
 #  Add configuration for static files storage using whitenoise
